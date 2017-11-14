@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by DNAPC on 14.11.2017.
@@ -35,16 +36,9 @@ public class Controller extends HttpServlet {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         Service service = serviceFactory.getService();
 
-        List<Entity> entities = null;
-        if (method.equals("SAX")) {
-            entities = service.SAXParse(PATH);
-        }
-        if (method.equals("StAX")) {
-            entities = service.StAXParse(PATH);
-        }
-        if (method.equals("DOM")) {
-            entities = service.DOMParse(PATH);
-        }
-        req.setAttribute("entities",entities);
+        Set<Entity> entities = null;
+        entities = service.parseXML(method,PATH);
+
+        req.setAttribute("entitySet",entities);
     }
 }
