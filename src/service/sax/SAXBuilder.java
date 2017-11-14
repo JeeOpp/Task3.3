@@ -28,7 +28,7 @@ public class SAXBuilder {
         return entitySet;
     }
 
-    public void buildSetStudents(String xmlPath){
+    public void buildEntitySet(String xmlPath){
         try{
             xmlReader.parse(xmlPath);
         }catch (SAXException ex){

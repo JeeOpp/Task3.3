@@ -5,6 +5,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 import service.Service;
+import service.dom.DOMBuilder;
 import service.sax.EntityHandler;
 import service.sax.SAXBuilder;
 
@@ -33,7 +34,7 @@ public class ServiceImpl implements Service {
 
     private Set<Entity> SAXParse(String xmlPath) {
         SAXBuilder builder = new SAXBuilder();
-        builder.buildSetStudents(xmlPath);
+        builder.buildEntitySet(xmlPath);
         return builder.getEntitySet();
     }
 
@@ -42,6 +43,8 @@ public class ServiceImpl implements Service {
     }
 
     private Set<Entity> DOMParse(String xmlPath) {
-        return null;
+        DOMBuilder builder = new DOMBuilder();
+        builder.buildEntitySet(xmlPath);
+        return builder.getEntitySet();
     }
 }

@@ -52,9 +52,9 @@ public class DOMBuilder {
         }
     }
     private Entity buildEntity(Element entityElement){
-
+        return null;
     }
     private /*static*/ String getElementTextContent(Element element, String elementName){
-        return text;
+        return null;
     }
 }
