@@ -1,42 +1,78 @@
 package service.sax;
 
-import entity.Entity;
-import entity.EntityEnum;
+import entity.Gem;
+import entity.GemEnum;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
  * Created by DNAPC on 14.11.2017.
  */
 public class EntityHandler extends DefaultHandler {
-    private Set<Entity> students;
-    private Entity current=null;
-    private EntityEnum currentEnum = null;
-    private EnumSet<EntityEnum> withText;
+    private Set<Gem> gemSet;
+    private Gem current=null;
+    private GemEnum currentEnum = null;
+    private EnumSet<GemEnum> withText;
 
     public EntityHandler() {
-        super();
+        gemSet = new HashSet<>();
+        withText = EnumSet.range(GemEnum.ORIGIN, GemEnum.FACECOUNT);
     }
 
     @Override
-    public void startElement(String s, String s1, String s2, Attributes attributes) throws SAXException {
-        super.startElement(s, s1, s2, attributes);
+    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+        if("gem".equals(localName)){
+            current = new Gem();
+            current.setName(attributes.getValue(0));
+            if(attributes.getLength() == 2){
+                current.setPreciousness(attributes.getValue(1));
+            }
+        }else {
+            GemEnum temp = GemEnum.valueOf(localName.toUpperCase());
+            if(withText.contains(temp)){
+                currentEnum=temp;
+            }
+        }
     }
 
     @Override
-    public void endElement(String s, String s1, String s2) throws SAXException {
-        super.endElement(s, s1, s2);
+    public void endElement(String uri, String localName, String qName) throws SAXException {
+        if("gem".equals(localName)){
+            gemSet.add(current);
+        }
     }
 
     @Override
     public void characters(char[] chars, int i, int i1) throws SAXException {
-        super.characters(chars, i, i1);
+        String context = new String(chars, i, i1).trim();
+        if(currentEnum!=null){
+            switch (currentEnum){
+                case ORIGIN:
+                    current.setOrigin(context);
+                    break;
+                case VALUE:
+                    current.setValue(Integer.parseInt(context));
+                    break;
+                case COLOUR:
+                    current.getVisualParameters().setColour(context);
+                    break;
+                case CLARITY:
+                    current.getVisualParameters().setClarity(Integer.parseInt(context));
+                    break;
+                case FACECOUNT:
+                    current.getVisualParameters().setFaceCount(Integer.parseInt(context));
+                    break;
+                default: throw new EnumConstantNotPresentException(currentEnum.getDeclaringClass(), currentEnum.name());
+            }
+            currentEnum = null;
+        }
     }
-    public Set<Entity> getEntities(){
-        return null;
+    public Set<Gem> getEntities(){
+        return gemSet;
     }
 }

@@ -1,6 +1,6 @@
 package controller;
 
-import entity.Entity;
+import entity.Gem;
 import service.Service;
 import service.ServiceFactory;
 
@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -31,12 +30,15 @@ public class Controller extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
 
+
+
+
         String method = req.getParameter("method");
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         Service service = serviceFactory.getService();
 
-        Set<Entity> entities = null;
+        Set<Gem> entities = null;
         entities = service.parseXML(method,PATH);
 
         req.setAttribute("entitySet",entities);

@@ -1,6 +1,7 @@
 package service.dom;
 
-import entity.Entity;
+import entity.Gem;
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -11,19 +12,17 @@ import java.util.HashSet;
 import java.util.Set;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 /**
  * Created by DNAPC on 14.11.2017.
  */
 public class DOMBuilder {
-    private Set<Entity> entitySet;
+    private Set<Gem> gemSet;
     private DocumentBuilder documentBuilder;
 
     public DOMBuilder(){
-        entitySet = new HashSet<>();
+        gemSet = new HashSet<>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try{
             documentBuilder = factory.newDocumentBuilder();
@@ -31,19 +30,19 @@ public class DOMBuilder {
             ex.printStackTrace();
         }
     }
-    public Set<Entity> getEntitySet(){
-        return entitySet;
+    public Set<Gem> getGemSet(){
+        return gemSet;
     }
     public void buildEntitySet(String xmlPath){
         Document document = null;
         try{
             document = documentBuilder.parse(xmlPath);
             Element root = document.getDocumentElement();
-            NodeList entityList = root.getElementsByTagName("entity");
-            for(int i=0; i<entityList.getLength();i++){
-                Element entityElement = (Element)entityList.item(i);
-                Entity entity = buildEntity(entityElement);
-                entitySet.add(entity);
+            NodeList gemList = root.getElementsByTagName("gem");
+            for(int i=0; i<gemList.getLength();i++){
+                Element gemElement = (Element)gemList.item(i);
+                Gem gem = buildEntity(gemElement);
+                gemSet.add(gem);
             }
         }catch (IOException ex){
             ex.printStackTrace();
@@ -51,10 +50,23 @@ public class DOMBuilder {
             ex.printStackTrace();
         }
     }
-    private Entity buildEntity(Element entityElement){
-        return null;
+    private Gem buildEntity(Element gemElement){
+        Gem gem = new Gem();
+        gem.setName(gemElement.getAttribute("name"));
+        gem.setKind(getElementTextContent(gemElement,"kind"));
+        gem.setOrigin(getElementTextContent(gemElement,"origin"));
+        gem.setPreciousness(gemElement.getAttribute("preciousness"));
+        gem.setValue(Integer.parseInt(getElementTextContent(gemElement,"value")));
+
+        Gem.VisualParameters visualParameters = gem.getVisualParameters();
+        visualParameters.setClarity(Integer.parseInt(getElementTextContent(gemElement,"clarity")));
+        visualParameters.setColour(getElementTextContent(gemElement,"colour"));
+        visualParameters.setFaceCount(Integer.parseInt(getElementTextContent(gemElement,"faceCount")));
+        return gem;
     }
-    private /*static*/ String getElementTextContent(Element element, String elementName){
-        return null;
+    private String getElementTextContent(Element element, String elementName){
+        NodeList nodeList = element.getElementsByTagName(elementName);
+        Node node = nodeList.item(0);
+        return node.getTextContent();
     }
 }
