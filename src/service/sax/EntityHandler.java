@@ -21,7 +21,7 @@ public class EntityHandler extends DefaultHandler {
 
     public EntityHandler() {
         gemSet = new HashSet<>();
-        withText = EnumSet.range(GemEnum.ORIGIN, GemEnum.FACECOUNT);
+        withText = EnumSet.range(GemEnum.KIND, GemEnum.FACECOUNT);
     }
 
     @Override
@@ -31,6 +31,8 @@ public class EntityHandler extends DefaultHandler {
             current.setName(attributes.getValue(0));
             if(attributes.getLength() == 2){
                 current.setPreciousness(attributes.getValue(1));
+            }else {
+                current.setPreciousness("non-precious");  //default
             }
         }else {
             GemEnum temp = GemEnum.valueOf(localName.toUpperCase());
@@ -52,6 +54,9 @@ public class EntityHandler extends DefaultHandler {
         String context = new String(chars, i, i1).trim();
         if(currentEnum!=null){
             switch (currentEnum){
+                case KIND:
+                    current.setKind(context);
+                    break;
                 case ORIGIN:
                     current.setOrigin(context);
                     break;

@@ -15,7 +15,7 @@ import java.util.Set;
  * Created by DNAPC on 14.11.2017.
  */
 public class Controller extends HttpServlet {
-    public static final String PATH = null;
+    public static final String PATH = "resources/gems.xml";
 
     public Controller() {
         super();
@@ -29,9 +29,6 @@ public class Controller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-
-
-
 
         String method = req.getParameter("method");
 

@@ -7,6 +7,7 @@ public enum GemEnum {
     GEMS("gems"),
     NAME("name"),
     PRECIOUSNESS("preciousness"),
+    KIND("kind"),
     ORIGIN("origin"),
     VALUE("value"),
     COLOUR("colour"),

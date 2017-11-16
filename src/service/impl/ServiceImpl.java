@@ -4,6 +4,7 @@ import entity.Gem;
 import service.Service;
 import service.dom.DOMBuilder;
 import service.sax.SAXBuilder;
+import service.stax.StAXBuilder;
 
 import java.util.Set;
 
@@ -32,7 +33,9 @@ public class ServiceImpl implements Service {
     }
 
     private Set<Gem> StAXParse(String xmlPath) {
-        return null;
+        StAXBuilder builder = new StAXBuilder();
+        builder.buildEntitySet(xmlPath);
+        return builder.getGemSet();
     }
 
     private Set<Gem> DOMParse(String xmlPath) {

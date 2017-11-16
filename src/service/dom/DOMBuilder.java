@@ -55,7 +55,12 @@ public class DOMBuilder {
         gem.setName(gemElement.getAttribute("name"));
         gem.setKind(getElementTextContent(gemElement,"kind"));
         gem.setOrigin(getElementTextContent(gemElement,"origin"));
-        gem.setPreciousness(gemElement.getAttribute("preciousness"));
+        String preciousness;
+        if((preciousness = gemElement.getAttribute("preciousness")).isEmpty()){
+            gem.setPreciousness("non-preciousness");
+        }else {
+            gem.setPreciousness(preciousness);
+        }
         gem.setValue(Integer.parseInt(getElementTextContent(gemElement,"value")));
 
         Gem.VisualParameters visualParameters = gem.getVisualParameters();
