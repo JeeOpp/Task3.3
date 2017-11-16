@@ -57,7 +57,7 @@ public class DOMBuilder {
         gem.setOrigin(getElementTextContent(gemElement,"origin"));
         String preciousness;
         if((preciousness = gemElement.getAttribute("preciousness")).isEmpty()){
-            gem.setPreciousness("non-preciousness");
+            gem.setPreciousness("non-precious");
         }else {
             gem.setPreciousness(preciousness);
         }

@@ -39,5 +39,6 @@ public class Controller extends HttpServlet {
         entities = service.parseXML(method,PATH);
 
         req.setAttribute("entitySet",entities);
+        req.getRequestDispatcher("table.jsp").forward(req,resp);
     }
 }

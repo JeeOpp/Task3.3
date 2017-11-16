@@ -11,6 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
+  <div align="center">
   <form action="Controller" method="post">
       <input type="hidden" name="method" value="SAX">
       <button type="submit">SAX</button>
@@ -23,5 +24,6 @@
       <input type="hidden" name="method" value="DOM">
       <button type="submit">DOM</button>
   </form>
+  </div>
   </body>
 </html>

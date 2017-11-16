@@ -80,6 +80,19 @@ public class Gem {
     public void setValue(Integer value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "Gem{" +
+                "name='" + name + '\'' +
+                ", kind='" + kind + '\'' +
+                ", preciousness='" + preciousness + '\'' +
+                ", origin='" + origin + '\'' +
+                ", visualParameters=" + visualParameters +
+                ", value=" + value +
+                '}';
+    }
+
     // цвет (зеленый, красный, желтый и т.д.), прозрачность (измеряется в процентах 0-100%), способы огранки (количество граней 4-15).
     public static class VisualParameters{
         private String colour;
@@ -117,6 +130,15 @@ public class Gem {
 
         public void setFaceCount(Integer faceCount) {
             this.faceCount = faceCount;
+        }
+
+        @Override
+        public String toString() {
+            return "VisualParameters{" +
+                    "colour='" + colour + '\'' +
+                    ", clarity=" + clarity +
+                    ", faceCount=" + faceCount +
+                    '}';
         }
     }
 }
