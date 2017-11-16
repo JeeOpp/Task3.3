@@ -6,6 +6,8 @@ import service.dom.DOMBuilder;
 import service.sax.SAXBuilder;
 import service.stax.StAXBuilder;
 
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -24,6 +26,24 @@ public class ServiceImpl implements Service {
             return DOMParse(xmlPath);
         }
         return null;
+    }
+
+    public static Set<Gem> getRecords(Set<Gem> gemSet, int first, int last){
+        int i=0;
+        Set<Gem> newGemSet = new HashSet<>();
+        Gem gem;
+        Iterator<Gem> iterator = gemSet.iterator();
+        while (iterator.hasNext()){
+            gem = iterator.next();
+            if (i>=first){
+                newGemSet.add(gem);
+            }
+            if (i==last){
+                return newGemSet;
+            }
+            i++;
+        }
+        return newGemSet;
     }
 
     private Set<Gem> SAXParse(String xmlPath) {

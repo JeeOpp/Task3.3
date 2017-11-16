@@ -12,7 +12,6 @@
     <title>Answer</title>
     <style type="text/css">
         table {
-            width: 500px;
             border-collapse: collapse;
         }
         td, th {
@@ -22,30 +21,41 @@
 </head>
 <body>
 <br/><br/>
-<table border="1" align="center">
-    <tr>
-        <th>Name</th>
-        <th>Kind</th>
-        <th>Preciousness</th>
-        <th>Origin</th>
-        <th>Colour</th>
-        <th>Clarity</th>
-        <th>FaceCount</th>
-        <th>Value</th>
-    </tr>
-    <c:forEach var="gem" items="${requestScope.entitySet}">
-    <tr>
-        <td>${gem.name}</td>
-        <td>${gem.kind}</td>
-        <td>${gem.preciousness}</td>
-        <td>${gem.origin}</td>
-        <td>${gem.visualParameters.colour}</td>
-        <td>${gem.visualParameters.clarity}</td>
-        <td>${gem.visualParameters.faceCount}</td>
-        <td>${gem.value}</td>
-    </tr>
+    <table border="1" width="500" align="center">
+        <tr>
+            <th>Name</th>
+            <th>Kind</th>
+            <th>Preciousness</th>
+            <th>Origin</th>
+            <th>Colour</th>
+            <th>Clarity</th><th>FaceCount</th>
+            <th>Value</th>
+        </tr>
+        <c:forEach var="gem" items="${requestScope.gemSetToPage}">
+        <tr>
+            <td>${gem.name}</td>
+            <td>${gem.kind}</td>
+            <td>${gem.preciousness}</td>
+            <td>${gem.origin}</td>
+            <td>${gem.visualParameters.colour}</td>
+            <td>${gem.visualParameters.clarity}</td>
+            <td>${gem.visualParameters.faceCount}</td>
+            <td>${gem.value}</td>
+        </tr>
     </c:forEach>
-    </tr>
-</table>
+    <table>
+        <tr>
+            <c:forEach begin="1" end="${requestScope.countPages}" var="i">
+                <c:choose>
+                    <c:when test="${requestScope.currentPage eq i}">
+                        <td>${i}</td>
+                    </c:when>
+                    <c:otherwise>
+                        <td><a href="/Controller?page=${i}"><h1>${i}</h1>></a></td>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+        </tr>
+    </table>
 </body>
 </html>
