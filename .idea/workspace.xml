@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a01bb381-9203-4a02-a5e8-48cd38586321" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/log4j_apache_log4j_extras_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/WrappedMarshaller.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gems.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/controller/Controller.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/entity/Gem$VisualParameters.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/entity/Gem$VisualParameters.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/entity/Gem.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/entity/Gem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/entity/Gems.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/entity/Gems.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/dom/DOMBuilder.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/dom/DOMBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/sax/SAXBuilder.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/sax/SAXBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/stax/StAXBuilder$1.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/stax/StAXBuilder$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/stax/StAXBuilder.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/stax/StAXBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/entity/Gem$VisualParameters.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/entity/Gem$VisualParameters.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/entity/Gem.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/entity/Gem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/entity/Gems.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/entity/Gems.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/service/dom/DOMBuilder.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/service/dom/DOMBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/service/sax/SAXBuilder.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/service/sax/SAXBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/service/stax/StAXBuilder$1.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/service/stax/StAXBuilder$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/service/stax/StAXBuilder.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/service/stax/StAXBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Task3.3.iml" afterPath="$PROJECT_DIR$/Task3.3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/Controller.java" afterPath="$PROJECT_DIR$/src/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/entity/Gem.java" afterPath="$PROJECT_DIR$/src/entity/Gem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/entity/Gems.java" afterPath="$PROJECT_DIR$/src/entity/Gems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/dom/DOMBuilder.java" afterPath="$PROJECT_DIR$/src/service/dom/DOMBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/sax/SAXBuilder.java" afterPath="$PROJECT_DIR$/src/service/sax/SAXBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/stax/StAXBuilder.java" afterPath="$PROJECT_DIR$/src/service/stax/StAXBuilder.java" />
-    </list>
+    <list default="true" id="a01bb381-9203-4a02-a5e8-48cd38586321" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,7 +42,7 @@
       <file leaf-file-name="WrappedMarshaller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/WrappedMarshaller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="224">
               <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -960,7 +931,7 @@
       <workItem from="1510826091674" duration="18846000" />
       <workItem from="1510848172523" duration="3000" />
       <workItem from="1510852867065" duration="215000" />
-      <workItem from="1511015679062" duration="5736000" />
+      <workItem from="1511015679062" duration="5770000" />
     </task>
     <task id="LOCAL-00001" summary="SAX and DOM">
       <created>1510682050363</created>
@@ -1004,15 +975,22 @@
       <option name="project" value="LOCAL" />
       <updated>1510847866181</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="almost">
+      <created>1511024472201</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1511024472201</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37781000" />
+    <option name="totallyTimeSpent" value="37815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1033,7 +1011,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992464" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1596,7 +1574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/WrappedMarshaller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="224">
           <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
