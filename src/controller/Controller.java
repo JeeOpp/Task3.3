@@ -17,7 +17,7 @@ import java.util.Set;
  * Created by DNAPC on 14.11.2017.
  */
 public class Controller extends HttpServlet {
-    public static final String PATH = "resources/gems.xml";
+    public static final String PATH = "D:\\Documents\\Java\\WEB\\Task3.3\\Task3.3\\resources\\test.xml";
 
     public Controller() {
         super();
@@ -38,7 +38,7 @@ public class Controller extends HttpServlet {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         Service service = serviceFactory.getService();
 
-        Set<Gem> gemSet = null;
+        Set<Gem> gemSet;
         if((gemSet = (Set<Gem>) session.getAttribute("gemSet") ) == null) {
             gemSet = service.parseXML(method, PATH);
             session.setAttribute("gemSet", gemSet);

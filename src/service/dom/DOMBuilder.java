@@ -13,11 +13,13 @@ import java.util.Set;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.apache.log4j.Logger;
 
 /**
  * Created by DNAPC on 14.11.2017.
  */
 public class DOMBuilder {
+    private static final Logger log = Logger.getLogger(DOMBuilder.class);
     private Set<Gem> gemSet;
     private DocumentBuilder documentBuilder;
 
@@ -27,7 +29,7 @@ public class DOMBuilder {
         try{
             documentBuilder = factory.newDocumentBuilder();
         }catch (ParserConfigurationException ex){
-            ex.printStackTrace();
+            log.error(ex);
         }
     }
     public Set<Gem> getGemSet(){
@@ -45,9 +47,9 @@ public class DOMBuilder {
                 gemSet.add(gem);
             }
         }catch (IOException ex){
-            ex.printStackTrace();
+            log.error(ex);
         }catch (SAXException ex){
-            ex.printStackTrace();
+            log.error(ex);
         }
     }
     private Gem buildEntity(Element gemElement){

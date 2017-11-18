@@ -2,6 +2,7 @@ package service.stax;
 
 import entity.Gem;
 import entity.GemEnum;
+import org.apache.log4j.Logger;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
@@ -24,6 +25,7 @@ import static entity.GemEnum.*;
  * Created by DNAPC on 14.11.2017.
  */
 public class StAXBuilder {
+    private static final Logger log = Logger.getLogger(StAXBuilder.class);
     private Gem gem = null;
     private GemEnum currentEnum = null;
     private Set<Gem> gemSet;
@@ -34,6 +36,7 @@ public class StAXBuilder {
         gemSet = new HashSet<>();
         xmlInputFactory = XMLInputFactory.newInstance();
     }
+
     public Set<Gem> getGemSet(){
         return gemSet;
     }
@@ -54,9 +57,9 @@ public class StAXBuilder {
                 }
             }
         } catch (XMLStreamException ex) {
-            ex.printStackTrace();
+            log.error(ex);
         } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
+            log.error(ex);
         }
     }
 

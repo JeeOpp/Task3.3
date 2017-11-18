@@ -1,25 +1,25 @@
 package entity;
 
+import javax.xml.bind.annotation.*;
 import java.sql.PreparedStatement;
 
 /**
  * Created by DNAPC on 14.11.2017.
  */
-/*2 Алмазный фонд
-Драгоценные и полудрагоценные камни:
-Name – название камня.
-Preciousness – может быть драгоценным либо полудрагоценным.
-Origin – место добывания.
-Visual parameters (должно быть несколько) – могут быть: цвет (зеленый, красный, желтый и т.д.), прозрачность (измеряется в процентах 0-100%), способы огранки (количество граней 4-15).
-Value – вес камня (измеряется в каратах).
-Корневой элемент назвать Gems.*/
-
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder={"kind","origin","visualParameters","value"},name = "gem")
 public class Gem {
+    @XmlAttribute(required = true)
+    @XmlID
     private String name;
+    @XmlElement(required = true)
     private String kind;
+    @XmlAttribute(required = false)
     private String preciousness;
+    @XmlElement(required = true)
     private String origin;
     private VisualParameters visualParameters = new VisualParameters();
+    @XmlElement(required = true)
     private Integer value;
 
     public Gem(){}
@@ -92,8 +92,7 @@ public class Gem {
                 ", value=" + value +
                 '}';
     }
-
-    // цвет (зеленый, красный, желтый и т.д.), прозрачность (измеряется в процентах 0-100%), способы огранки (количество граней 4-15).
+    @XmlType(propOrder={"clarity","colour","faceCount"}, name = "visualParameters")
     public static class VisualParameters{
         private String colour;
         private Integer clarity;
