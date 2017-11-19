@@ -23,7 +23,7 @@
 <br/><br/>
     <table border="1" width="500" align="center">
         <tr>
-            <th>Name</th>
+            <th>Id</th>
             <th>Kind</th>
             <th>Preciousness</th>
             <th>Origin</th>
@@ -33,7 +33,7 @@
         </tr>
         <c:forEach var="gem" items="${requestScope.gemSetToPage}">
         <tr>
-            <td>${gem.name}</td>
+            <td>${gem.id}</td>
             <td>${gem.kind}</td>
             <td>${gem.preciousness}</td>
             <td>${gem.origin}</td>

@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.Set;
@@ -14,15 +13,15 @@ import java.util.Set;
 /**
  * Created by DNAPC on 18.11.2017.
  */
-public class WrappedMarshaller {
-    private static final Logger log = Logger.getLogger(WrappedMarshaller.class);
+public class Marshaller {
+    private static final Logger log = Logger.getLogger(Marshaller.class);
     private Set<Gem> gemSet = null;
     private String path = null;
 
-    public WrappedMarshaller(){
+    public Marshaller(){
 
     }
-    public WrappedMarshaller(Set<Gem> gemSet, String path){
+    public Marshaller(Set<Gem> gemSet, String path){
         this.gemSet = gemSet;
         this.path = path;
     }
@@ -31,7 +30,7 @@ public class WrappedMarshaller {
 
         try {
             JAXBContext context = JAXBContext.newInstance(Gems.class);
-            Marshaller marshaller = context.createMarshaller();
+            javax.xml.bind.Marshaller marshaller = context.createMarshaller();
             Gems gems = new Gems();
             for (Gem each : gemSet) {
                 gems.add(each);

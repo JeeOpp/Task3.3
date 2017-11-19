@@ -54,7 +54,7 @@ public class DOMBuilder {
     }
     private Gem buildEntity(Element gemElement){
         Gem gem = new Gem();
-        gem.setName(gemElement.getAttribute("name"));
+        gem.setId(gemElement.getAttribute("id"));
         gem.setKind(getElementTextContent(gemElement,"kind"));
         gem.setOrigin(getElementTextContent(gemElement,"origin"));
         String preciousness;

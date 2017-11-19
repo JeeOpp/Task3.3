@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 public class Gem {
     @XmlAttribute(required = true)
     @XmlID
-    private String name;
+    private String id;
     @XmlElement(required = true)
     private String kind;
     @XmlAttribute(required = false)
@@ -24,8 +24,8 @@ public class Gem {
 
     public Gem(){}
 
-    public Gem(String name, String kind, String preciousness, String origin, VisualParameters visualParameters, Integer value) {
-        this.name = name;
+    public Gem(String id, String kind, String preciousness, String origin, VisualParameters visualParameters, Integer value) {
+        this.id = id;
         this.kind = kind;
         this.preciousness = preciousness;
         this.origin = origin;
@@ -33,8 +33,8 @@ public class Gem {
         this.value = value;
     }
 
-    public String getName() {
-        return name;
+    public String getId() {
+        return id;
     }
 
     public String getKind() {
@@ -57,8 +57,8 @@ public class Gem {
         return value;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setKind(String kind) {
@@ -84,7 +84,7 @@ public class Gem {
     @Override
     public String toString() {
         return "Gem{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
                 ", kind='" + kind + '\'' +
                 ", preciousness='" + preciousness + '\'' +
                 ", origin='" + origin + '\'' +
@@ -92,6 +92,35 @@ public class Gem {
                 ", value=" + value +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Gem)) return false;
+
+        Gem gem = (Gem) o;
+
+        if (getId() != null ? !getId().equals(gem.getId()) : gem.getId() != null) return false;
+        if (getKind() != null ? !getKind().equals(gem.getKind()) : gem.getKind() != null) return false;
+        if (getPreciousness() != null ? !getPreciousness().equals(gem.getPreciousness()) : gem.getPreciousness() != null)
+            return false;
+        if (getOrigin() != null ? !getOrigin().equals(gem.getOrigin()) : gem.getOrigin() != null) return false;
+        if (getVisualParameters() != null ? !getVisualParameters().equals(gem.getVisualParameters()) : gem.getVisualParameters() != null)
+            return false;
+        return getValue() != null ? getValue().equals(gem.getValue()) : gem.getValue() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId() != null ? getId().hashCode() : 0;
+        result = 31 * result + (getKind() != null ? getKind().hashCode() : 0);
+        result = 31 * result + (getPreciousness() != null ? getPreciousness().hashCode() : 0);
+        result = 31 * result + (getOrigin() != null ? getOrigin().hashCode() : 0);
+        result = 31 * result + (getVisualParameters() != null ? getVisualParameters().hashCode() : 0);
+        result = 31 * result + (getValue() != null ? getValue().hashCode() : 0);
+        return result;
+    }
+
     @XmlType(propOrder={"clarity","colour","faceCount"}, name = "visualParameters")
     public static class VisualParameters{
         private String colour;
@@ -138,6 +167,27 @@ public class Gem {
                     ", clarity=" + clarity +
                     ", faceCount=" + faceCount +
                     '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof VisualParameters)) return false;
+
+            VisualParameters that = (VisualParameters) o;
+
+            if (getColour() != null ? !getColour().equals(that.getColour()) : that.getColour() != null) return false;
+            if (getClarity() != null ? !getClarity().equals(that.getClarity()) : that.getClarity() != null)
+                return false;
+            return getFaceCount() != null ? getFaceCount().equals(that.getFaceCount()) : that.getFaceCount() == null;
+        }
+
+        @Override
+        public int hashCode() {
+            int result = getColour() != null ? getColour().hashCode() : 0;
+            result = 31 * result + (getClarity() != null ? getClarity().hashCode() : 0);
+            result = 31 * result + (getFaceCount() != null ? getFaceCount().hashCode() : 0);
+            return result;
         }
     }
 }

@@ -28,7 +28,7 @@ public class EntityHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         if("gem".equals(localName)){
             current = new Gem();
-            current.setName(attributes.getValue(0));
+            current.setId(attributes.getValue(0));
             if(attributes.getLength() == 2){
                 current.setPreciousness(attributes.getValue(1));
             }else {

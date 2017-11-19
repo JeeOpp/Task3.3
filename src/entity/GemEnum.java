@@ -5,7 +5,7 @@ package entity;
  */
 public enum GemEnum {
     GEMS("gems"),
-    NAME("name"),
+    ID("id"),
     PRECIOUSNESS("preciousness"),
     KIND("kind"),
     ORIGIN("origin"),

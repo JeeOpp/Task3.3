@@ -67,8 +67,8 @@ public class StAXBuilder {
         StartElement startElement = xmlEvent.asStartElement();
         if (startElement.getName().getLocalPart().equals("gem")) {
             gem = new Gem();
-            Attribute attr = startElement.getAttributeByName(new QName("name"));
-            gem.setName(attr.getValue());
+            Attribute attr = startElement.getAttributeByName(new QName("id"));
+            gem.setId(attr.getValue());
             attr = startElement.getAttributeByName(new QName("preciousness"));
             if (attr != null) {
                 gem.setPreciousness(attr.getValue());
