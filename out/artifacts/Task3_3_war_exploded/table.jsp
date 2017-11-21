@@ -45,10 +45,10 @@
             <c:forEach begin="1" end="${requestScope.countPages}" var="i">
                 <c:choose>
                     <c:when test="${requestScope.currentPage eq i}">
-                        <td><h1>${i}</h1>></td>
+                        <td><h1>${i}</h1></td>
                     </c:when>
                     <c:otherwise>
-                        <td><a href="/Controller?page=${i}"><h1>${i}</h1>></a></td>
+                        <td><a href="/Controller?page=${i}"><h1>${i}</h1></a></td>
                     </c:otherwise>
                 </c:choose>
             </c:forEach>

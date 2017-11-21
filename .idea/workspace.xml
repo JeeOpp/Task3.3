@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a01bb381-9203-4a02-a5e8-48cd38586321" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/bootstrap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/controller/Controller.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/stax/StAXBuilder.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/stax/StAXBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/controller/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Task3.3.iml" afterPath="$PROJECT_DIR$/Task3.3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/table.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/table.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/Controller.java" afterPath="$PROJECT_DIR$/src/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/table.jsp" afterPath="$PROJECT_DIR$/web/table.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -77,8 +69,8 @@
       <file leaf-file-name="table.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/table.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="440">
+              <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -1027,7 +1019,7 @@
       <workItem from="1511088729011" duration="229000" />
       <workItem from="1511089151882" duration="8000" />
       <workItem from="1511284347748" duration="428000" />
-      <workItem from="1511289322145" duration="1938000" />
+      <workItem from="1511289322145" duration="2441000" />
     </task>
     <task id="LOCAL-00001" summary="SAX and DOM">
       <created>1510682050363</created>
@@ -1085,7 +1077,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511087953471</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="bootstrap">
+      <created>1511291276679</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511291276679</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1121,7 +1120,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47469000" />
+    <option name="totallyTimeSpent" value="47972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1175,7 +1174,8 @@
     <MESSAGE value="with table&#10;" />
     <MESSAGE value="almost" />
     <MESSAGE value="complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete" />
+    <MESSAGE value="bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="bootstrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1591,8 +1591,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/table.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="440">
+          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
           <folding />
         </state>
       </provider>
