@@ -40,20 +40,22 @@
         </tr>
     </c:forEach>
     </table>
-    <table>
-        <tr>
-            <c:forEach begin="1" end="${requestScope.countPages}" var="i">
-                <c:choose>
-                    <c:when test="${requestScope.currentPage eq i}">
-                        <td><h1>${i}</h1></td>
-                    </c:when>
-                    <c:otherwise>
-                        <td><a href="/Controller?page=${i}"><h1>${i}</h1></a></td>
-                    </c:otherwise>
-                </c:choose>
-            </c:forEach>
-        </tr>
-    </table>
+
+        <nav aria-label="Page navigation example">    <!-- table -->
+            <ul class="pagination">                   <!-- tr -->
+                <c:forEach begin="1" end="${requestScope.countPages}" var="i">
+                    <c:choose>
+                        <c:when test="${requestScope.currentPage eq i}">
+                            <li class="page-item"><a class="page-link">${i}</a></li>      <!-- td-->
+                        </c:when>
+                        <c:otherwise>
+                            <li class="page-item"><a class="page-link" href="/Controller?page=${i}">${i}</a></li>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+            </ul>
+        </nav>
+
     </div>
 </body>
 </html>
