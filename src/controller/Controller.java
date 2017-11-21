@@ -4,7 +4,6 @@ import entity.Gem;
 import service.Service;
 import service.ServiceFactory;
 import service.impl.ServiceImpl;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

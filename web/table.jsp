@@ -10,18 +10,13 @@
 <html>
 <head>
     <title>Answer</title>
-    <style type="text/css">
-        table {
-            border-collapse: collapse;
-        }
-        td, th {
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
 <br/><br/>
-    <table border="1" width="500" align="center">
+    <div class="container" align="center">
+    <table class="table table-striped">
+        <thead class="thead-dark">
         <tr>
             <th>Id</th>
             <th>Kind</th>
@@ -31,6 +26,7 @@
             <th>Clarity</th><th>FaceCount</th>
             <th>Value</th>
         </tr>
+        </thead>
         <c:forEach var="gem" items="${requestScope.gemSetToPage}">
         <tr>
             <td>${gem.id}</td>
@@ -43,12 +39,13 @@
             <td>${gem.value}</td>
         </tr>
     </c:forEach>
+    </table>
     <table>
         <tr>
             <c:forEach begin="1" end="${requestScope.countPages}" var="i">
                 <c:choose>
                     <c:when test="${requestScope.currentPage eq i}">
-                        <td>${i}</td>
+                        <td><h1>${i}</h1>></td>
                     </c:when>
                     <c:otherwise>
                         <td><a href="/Controller?page=${i}"><h1>${i}</h1>></a></td>
@@ -57,5 +54,6 @@
             </c:forEach>
         </tr>
     </table>
+    </div>
 </body>
 </html>
