@@ -1,3 +1,4 @@
+import controller.Controller;
 import entity.Gem;
 import org.junit.Test;
 import service.sax.SAXBuilder;
@@ -12,7 +13,7 @@ import static junit.framework.Assert.assertEquals;
 public class SAXBuilderTest {
     @Test
     public void buildEntityTest(){
-        String xmlPath = "D:\\Documents\\Java\\WEB\\Task3.3\\Task3.3\\resources\\test.xml";
+        String xmlPath = Controller.PATH;
         SAXBuilder saxBuilder = new SAXBuilder();
         saxBuilder.buildEntitySet(xmlPath);
         Set<Gem> gemSet = saxBuilder.getGemSet();

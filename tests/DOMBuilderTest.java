@@ -1,3 +1,4 @@
+import controller.Controller;
 import entity.Gem;
 import org.junit.Test;
 import service.dom.DOMBuilder;
@@ -12,7 +13,7 @@ import static junit.framework.Assert.*;
 public class DOMBuilderTest {
     @Test
     public void buildEntityTest(){
-        String xmlPath = "D:\\Documents\\Java\\WEB\\Task3.3\\Task3.3\\resources\\test.xml";
+        String xmlPath = Controller.PATH;
         DOMBuilder domBuilder = new DOMBuilder();
         domBuilder.buildEntitySet(xmlPath);
         Set<Gem> gemSet = domBuilder.getGemSet();
