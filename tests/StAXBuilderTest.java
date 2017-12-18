@@ -1,7 +1,7 @@
 import controller.Controller;
 import entity.Gem;
 import org.junit.Test;
-import service.stax.StAXBuilder;
+import service.builder.StAXBuilder;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package service.stax;
+package service.builder;
 
 import entity.Gem;
 import entity.GemEnum;
@@ -19,26 +19,18 @@ import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Set;
 
-import static entity.GemEnum.*;
-
 /**
  * Created by DNAPC on 14.11.2017.
  */
-public class StAXBuilder {
-    private static final Logger log = Logger.getLogger(StAXBuilder.class);
+public class StAXBuilder extends AbstractBuilder {
     private Gem gem = null;
     private GemEnum currentEnum = null;
-    private Set<Gem> gemSet;
     private EnumSet<GemEnum> withText = EnumSet.range(GemEnum.KIND, GemEnum.FACECOUNT);
     private XMLInputFactory xmlInputFactory;
 
     public StAXBuilder(){
         gemSet = new HashSet<>();
         xmlInputFactory = XMLInputFactory.newInstance();
-    }
-
-    public Set<Gem> getGemSet(){
-        return gemSet;
     }
 
     public void buildEntitySet(String xmlPath) {

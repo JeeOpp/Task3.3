@@ -1,4 +1,4 @@
-package service.sax;
+package service;
 
 import entity.Gem;
 import entity.GemEnum;

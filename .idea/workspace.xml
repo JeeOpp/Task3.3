@@ -2,11 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a01bb381-9203-4a02-a5e8-48cd38586321" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/gems.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/builder/AbstractBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/builder/BuilderDirector.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/schema.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Task3.3/schema.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/schema.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/Tester.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/controller/Controller.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/controller/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/Service.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/Service.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/impl/ServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/service/impl/ServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/controller/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/service/Service.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/service/Service.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/service/impl/ServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/Task3.3/service/impl/ServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/test.xml" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/WEB-INF/classes/test.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/table.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Task3_3_war_exploded/table.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task3.3/test.xml" afterPath="$PROJECT_DIR$/out/production/Task3.3/test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/test.xml" afterPath="$PROJECT_DIR$/resources/test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/Controller.java" afterPath="$PROJECT_DIR$/src/controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/Service.java" afterPath="$PROJECT_DIR$/src/service/Service.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/impl/ServiceImpl.java" afterPath="$PROJECT_DIR$/src/service/impl/ServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/DOMBuilderTest.java" afterPath="$PROJECT_DIR$/tests/DOMBuilderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/SAXBuilderTest.java" afterPath="$PROJECT_DIR$/tests/SAXBuilderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/StAXBuilderTest.java" afterPath="$PROJECT_DIR$/tests/StAXBuilderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/table.jsp" afterPath="$PROJECT_DIR$/web/table.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/service/dom/DOMBuilder.java" afterPath="$PROJECT_DIR$/src/service/builder/DOMBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/service/sax/EntityHandler.java" afterPath="$PROJECT_DIR$/src/service/EntityHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/service/sax/SAXBuilder.java" afterPath="$PROJECT_DIR$/src/service/builder/SAXBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/service/stax/StAXBuilder.java" afterPath="$PROJECT_DIR$/src/service/builder/StAXBuilder.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,30 +60,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="61" column="36" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Gem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/Service.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="352">
+              <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -75,41 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAXBuilderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/SAXBuilderTest.java">
+      <file leaf-file-name="SAXBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/builder/SAXBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StAXBuilderTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/StAXBuilderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/table.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DOMBuilderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/DOMBuilderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+            <state relative-caret-position="352">
+              <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,22 +89,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DOMBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/dom/DOMBuilder.java">
+      <file leaf-file-name="EntityHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/EntityHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="78" column="1" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+            <state relative-caret-position="22">
+              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/Service.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/impl/ServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+            <state relative-caret-position="356">
+              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuilderDirector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/builder/BuilderDirector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,28 +156,39 @@
       <list>
         <option value="$PROJECT_DIR$/src/service/impl/PersonDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/entity/EntityEnum.java" />
-        <option value="$PROJECT_DIR$/src/service/Service.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/entity/Entity.java" />
         <option value="$PROJECT_DIR$/gems.xml" />
-        <option value="$PROJECT_DIR$/src/service/impl/ServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/entity/Gems.java" />
-        <option value="$PROJECT_DIR$/src/service/sax/SAXBuilder.java" />
         <option value="$PROJECT_DIR$/src/service/WrappedMarshaller.java" />
-        <option value="$PROJECT_DIR$/src/service/Marshaller.java" />
-        <option value="$PROJECT_DIR$/resources/schema.xsd" />
         <option value="$PROJECT_DIR$/src/entity/GemEnum.java" />
         <option value="$PROJECT_DIR$/src/service/dom/DOMBuilder.java" />
         <option value="$PROJECT_DIR$/src/service/sax/EntityHandler.java" />
         <option value="$PROJECT_DIR$/src/entity/Gem.java" />
         <option value="$PROJECT_DIR$/src/service/stax/StAXBuilder.java" />
         <option value="$PROJECT_DIR$/tests/Tester.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/web/table.jsp" />
         <option value="$PROJECT_DIR$/tests/DOMBuilderTest.java" />
         <option value="$PROJECT_DIR$/tests/SAXBuilderTest.java" />
         <option value="$PROJECT_DIR$/tests/StAXBuilderTest.java" />
+        <option value="$PROJECT_DIR$/src/service/Marshaller.java" />
+        <option value="$PROJECT_DIR$/src/service/XMLValidator.java" />
+        <option value="$PROJECT_DIR$/src/service/Service.java" />
+        <option value="$PROJECT_DIR$/resources/schema.xsd" />
+        <option value="$PROJECT_DIR$/resources/gems.xsd" />
+        <option value="$PROJECT_DIR$/web/table.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/resources/test.xml" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/service/StAXBuilder.java" />
+        <option value="$PROJECT_DIR$/src/service/SAXBuilder.java" />
+        <option value="$PROJECT_DIR$/src/service/sax/SAXBuilder.java" />
+        <option value="$PROJECT_DIR$/src/service/EntityHandler.java" />
+        <option value="$PROJECT_DIR$/src/service/builder/SAXBuilder.java" />
+        <option value="$PROJECT_DIR$/src/service/builder/StAXBuilder.java" />
+        <option value="$PROJECT_DIR$/src/service/builder/AbstractBuilder.java" />
+        <option value="$PROJECT_DIR$/src/service/builder/DOMBuilder.java" />
+        <option value="$PROJECT_DIR$/src/service/builder/BuilderDirector.java" />
+        <option value="$PROJECT_DIR$/src/service/impl/ServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -219,9 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,43 +262,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task3.3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task3.3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task3.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task3.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task3.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task3.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,7 +316,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dom" />
+              <option name="myItemId" value="builder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,6 +390,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -429,7 +418,7 @@
       <recent name="D:\Documents\Java\WEB\Task3.3\Task3.3\src\service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DOMBuilderTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.361">
     <configuration default="false" name="DOMBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Task3.3" />
@@ -905,8 +894,7 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat 8.0.361" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.361" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8086/" />
+    <configuration default="false" name="Tomcat 8.0.361" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Task3.3:war exploded">
           <settings>
@@ -1024,7 +1012,22 @@
       <workItem from="1511292035764" duration="1567000" />
       <workItem from="1511434997788" duration="36000" />
       <workItem from="1511435282615" duration="94000" />
-      <workItem from="1511451629227" duration="93000" />
+      <workItem from="1511451629227" duration="159000" />
+      <workItem from="1511465721285" duration="699000" />
+      <workItem from="1511550122480" duration="350000" />
+      <workItem from="1511550763803" duration="7000" />
+      <workItem from="1511552121068" duration="11000" />
+      <workItem from="1511992022181" duration="24000" />
+      <workItem from="1512002531045" duration="111000" />
+      <workItem from="1512266686254" duration="145000" />
+      <workItem from="1512269934110" duration="242000" />
+      <workItem from="1512333673844" duration="612000" />
+      <workItem from="1512336856918" duration="315000" />
+      <workItem from="1512494467144" duration="23000" />
+      <workItem from="1512651781199" duration="625000" />
+      <workItem from="1512820319041" duration="102000" />
+      <workItem from="1513537236086" duration="430000" />
+      <workItem from="1513612033709" duration="18734000" />
     </task>
     <task id="LOCAL-00001" summary="SAX and DOM">
       <created>1510682050363</created>
@@ -1103,7 +1106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511293595977</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="path">
+      <created>1511451733807</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1511451733807</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1139,7 +1149,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49782000" />
+    <option name="totallyTimeSpent" value="72278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1148,7 +1158,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1157,17 +1167,17 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4382786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21517554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3238958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17006437" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2081545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1195,43 +1205,20 @@
     <MESSAGE value="complete" />
     <MESSAGE value="bootstrap" />
     <MESSAGE value="pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagination" />
+    <MESSAGE value="path" />
+    <option name="LAST_COMMIT_MESSAGE" value="path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/service/impl/ServiceImpl.java</url>
-          <line>31</line>
+          <line>19</line>
           <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/Controller.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/Controller.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/table.jsp</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/service/dom/DOMBuilder.java</url>
-          <line>22</line>
-          <properties field="gemSet" class="service.dom.DOMBuilder" />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1245,30 +1232,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Gem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/ServiceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/service/impl/ServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
@@ -1277,7 +1240,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/sax/SAXBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/service/builder/SAXBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
@@ -1285,7 +1248,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/sax/EntityHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/service/EntityHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
@@ -1293,7 +1256,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/dom/DOMBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/service/builder/DOMBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1327,9 +1290,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,22 +1346,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/impl/PersonDAOImpl.java" />
     <entry file="file://$PROJECT_DIR$/resources/gems.xml" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gems1.xml" />
     <entry file="file://$PROJECT_DIR$/gems.xml" />
-    <entry file="jar://C:/Program Files (x86)/apache-tomcat-8.0.41-windows-x64/apache-tomcat-8.0.41/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4576">
-          <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files (x86)/apache-tomcat-8.0.41-windows-x64/apache-tomcat-8.0.41/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/javax/xml/bind/annotation/XmlAccessorType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1443,29 +1391,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/sax/EntityHandler.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="34" column="67" lean-forward="false" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
+        <state relative-caret-position="286">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/sax/SAXBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/Gems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        <state relative-caret-position="198">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/stax/StAXBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="73" column="53" lean-forward="true" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1481,13 +1419,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="89" lean-forward="false" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Gems.java">
+    <entry file="file://$PROJECT_DIR$/src/service/XMLValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="202">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1497,108 +1436,6 @@
         <state relative-caret-position="132">
           <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/test.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/schema.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/Marshaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="73" />
-          <folding>
-            <element signature="method#Marshaller#0;class#Marshaller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Gem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/ServiceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/dom/DOMBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="78" column="1" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/impl/ServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="61" column="36" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/DOMBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1612,8 +1449,156 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/StAXBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Gem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2720">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/gems.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/table.jsp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/Marshaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding>
+            <element signature="method#Marshaller#0;class#Marshaller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/DOMBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/EntityHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/ServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/builder/SAXBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/builder/DOMBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/builder/AbstractBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/builder/StAXBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/builder/BuilderDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/impl/ServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1678,7 +1663,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1698,7 +1682,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>bootstrap</last-edited>
+          <last-edited>log4j:apache-log4j-extras:1.2.17</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

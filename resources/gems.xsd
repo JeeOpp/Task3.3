@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/gems"
+        xmlns:tns="http://www.example.com/gems"
+        elementFormDefault="qualified">
+
+
+<element name="kind" type="string" default="stone"/>
+<element name="origin" default="none">
+    <simpleType>
+        <restriction base="string">
+            <pattern value="[A-Z][a-z]*"/>
+        </restriction>
+    </simpleType>
+</element>
+
+<element name="clarity">
+    <simpleType>
+        <restriction base="positiveInteger">
+            <minInclusive value="0"/>
+            <maxInclusive value="100"/>
+        </restriction>
+    </simpleType>
+</element>
+<element name="colour">
+    <simpleType>
+        <restriction base="string">
+            <enumeration value="red"/>
+            <enumeration value="orange"/>
+            <enumeration value="yellow"/>
+            <enumeration value="green"/>
+            <enumeration value="sky"/>
+            <enumeration value="blue"/>
+            <enumeration value="purple"/>
+            <enumeration value="white"/>
+            <enumeration value="black"/>
+        </restriction>
+    </simpleType>
+</element>
+<element name="faceCount">
+    <simpleType>
+        <restriction base="positiveInteger">
+            <minInclusive value="4"/>
+            <maxInclusive value="15"/>
+        </restriction>
+    </simpleType>
+</element>
+<element name="value" type="positiveInteger"/>
+
+<element name="visualParameters">
+    <complexType>
+        <sequence>
+            <element ref="tns:clarity"/>
+            <element ref="tns:colour"/>
+            <element ref="tns:faceCount"/>
+        </sequence>
+    </complexType>
+</element>
+
+<element name="gem">
+    <complexType>
+        <sequence>
+            <element ref="tns:kind"/>
+            <element ref="tns:origin"/>
+            <element ref="tns:visualParameters"/>
+            <element ref="tns:value"/>
+        </sequence>
+        <attribute name="id" type ="ID" use="required"/>
+        <attribute name="preciousness" default="non-precious" use="optional">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="precious"/>
+                    <enumeration value="non-precious"/>
+                    <enumeration value="semi-precious"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+</element>
+
+<element name="Gems">
+    <complexType>
+        <sequence>
+            <element ref="tns:gem" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+</element>
+</schema>

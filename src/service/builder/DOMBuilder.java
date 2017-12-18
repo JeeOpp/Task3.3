@@ -1,4 +1,4 @@
-package service.dom;
+package service.builder;
 
 import entity.Gem;
 import org.w3c.dom.Node;
@@ -18,9 +18,8 @@ import org.apache.log4j.Logger;
 /**
  * Created by DNAPC on 14.11.2017.
  */
-public class DOMBuilder {
+public class DOMBuilder extends AbstractBuilder{
     private static final Logger log = Logger.getLogger(DOMBuilder.class);
-    private Set<Gem> gemSet;
     private DocumentBuilder documentBuilder;
 
     public DOMBuilder(){
@@ -32,11 +31,8 @@ public class DOMBuilder {
             log.error(ex);
         }
     }
-    public Set<Gem> getGemSet(){
-        return gemSet;
-    }
     public void buildEntitySet(String xmlPath){
-        Document document = null;
+        Document document;
         try{
             document = documentBuilder.parse(xmlPath);
             Element root = document.getDocumentElement();

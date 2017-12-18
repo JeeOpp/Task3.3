@@ -1,7 +1,7 @@
 import controller.Controller;
 import entity.Gem;
 import org.junit.Test;
-import service.sax.SAXBuilder;
+import service.builder.SAXBuilder;
 
 import java.util.Set;
 

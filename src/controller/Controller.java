@@ -18,6 +18,8 @@ import java.util.Set;
 public class Controller extends HttpServlet {
     public static final String PATH = "D:\\Documents\\Java\\WEB\\Task3.3\\Task3.3\\resources\\test.xml";
 
+    public static final int RECORDS_PER_PAGE = 5;
+
     public Controller() {
         super();
     }
@@ -30,38 +32,24 @@ public class Controller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        HttpSession session = req.getSession();
-
         String method = req.getParameter("method");
-
-        ServiceFactory serviceFactory = ServiceFactory.getInstance();
-        Service service = serviceFactory.getService();
-
-        Set<Gem> gemSet;
-        if((gemSet = (Set<Gem>) session.getAttribute("gemSet") ) == null) {
-            gemSet = service.parseXML(method, PATH);
-            session.setAttribute("gemSet", gemSet);
-        }
-        buildPagination(gemSet,req,resp);
-    }
-
-    private void buildPagination(Set<Gem> gemSet, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        int page = 1;
-        int recordsPerPage = 5;
+        int page = 1; //default page
         if(req.getParameter("page") != null){
             page = Integer.parseInt(req.getParameter("page"));
         }
-        int firstElement = (page-1)*recordsPerPage;
-        int lastElement = firstElement+recordsPerPage-1;
-
-        Set<Gem> gemSetToPage =  ServiceImpl.getRecords(gemSet,firstElement, lastElement);
+        ServiceFactory serviceFactory = ServiceFactory.getInstance();
+        Service service = serviceFactory.getService();
+        Set<Gem> gemSet = service.parseXML(method, PATH);
+        Set<Gem> gemSetToPage =  service.getRecords(gemSet,page, RECORDS_PER_PAGE);
         int countRecords = gemSet.size();
-        int countPages = (int) Math.ceil(countRecords* 1.0 / recordsPerPage);
+        int countPages = (int) Math.ceil(countRecords* 1.0 / RECORDS_PER_PAGE);
 
         req.setAttribute("gemSetToPage",gemSetToPage);
         req.setAttribute("countPages", countPages);
         req.setAttribute("currentPage", page);
+        req.setAttribute("method", method);
 
         req.getRequestDispatcher("table.jsp").forward(req,resp);
     }
+
 }

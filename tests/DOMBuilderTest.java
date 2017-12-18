@@ -1,7 +1,7 @@
 import controller.Controller;
 import entity.Gem;
 import org.junit.Test;
-import service.dom.DOMBuilder;
+import service.builder.DOMBuilder;
 
 import java.util.Set;
 
