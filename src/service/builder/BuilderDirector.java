@@ -17,4 +17,7 @@ public class BuilderDirector {
     }
 
     public Set<Gem> getGemSet() { return abstractBuilder.getGemSet(); }
+    public AbstractBuilder getAbstractBuilder(){
+        return abstractBuilder;
+    }
 }

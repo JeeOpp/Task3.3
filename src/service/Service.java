@@ -9,5 +9,5 @@ import java.util.Set;
  */
 public interface Service {
     Set<Gem> parseXML(String method, String xmlPath);
-    Set<Gem> getRecords(Set<Gem> gemSet, int first, int last);
+    Set<Gem> getRecords(Set<Gem> gemSet, int page, int recordsPerPage);
 }

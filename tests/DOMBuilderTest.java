@@ -1,5 +1,6 @@
 import controller.Controller;
 import entity.Gem;
+import entity.NaturalGem;
 import org.junit.Test;
 import service.builder.DOMBuilder;
 
@@ -19,10 +20,8 @@ public class DOMBuilderTest {
         Set<Gem> gemSet = domBuilder.getGemSet();
 
         Gem.VisualParameters visualParameters = new Gem.VisualParameters("yellow",86,10);
-        //Gem example = new Gem("a1","Yeludit","semi-precious","Kazahstan",visualParameters,12);
+        Gem example = new NaturalGem("a1","Yeludit","semi-precious","Kazahstan",visualParameters,12,100000);
 
-        //Boolean expected = gemSet.contains(example);
-
-        //assertEquals(true, gemSet.contains(example));
+        assertEquals(true, gemSet.contains(example));
     }
 }

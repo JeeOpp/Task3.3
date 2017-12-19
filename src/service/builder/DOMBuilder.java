@@ -56,7 +56,7 @@ public class DOMBuilder extends AbstractBuilder{
     }
 
     private Gem buildEntity(Element gemElement){
-        Gem gem = null;
+        Gem gem;
         if (gemElement.getTagName().equals("naturalGem")) {
             gem = new NaturalGem();
             gem.setAge(Integer.parseInt(getElementTextContent(gemElement,"age")));
