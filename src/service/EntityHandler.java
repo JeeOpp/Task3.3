@@ -1,7 +1,9 @@
 package service;
 
+import entity.FakeGem;
 import entity.Gem;
 import entity.GemEnum;
+import entity.NaturalGem;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -21,20 +23,20 @@ public class EntityHandler extends DefaultHandler {
 
     public EntityHandler() {
         gemSet = new HashSet<>();
-        withText = EnumSet.range(GemEnum.KIND, GemEnum.FACECOUNT);
+        withText = EnumSet.range(GemEnum.KIND, GemEnum.SIMILARITY);
     }
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if("gem".equals(localName)){
-            current = new Gem();
+        if ("naturalGem".equals(localName) || "fakeGem".equals(localName)) {
+            current = localName.equals("naturalGem") ? new NaturalGem(): new FakeGem();
             current.setId(attributes.getValue(0));
-            if(attributes.getLength() == 2){
+            if (attributes.getLength() == 2) {
                 current.setPreciousness(attributes.getValue(1));
-            }else {
+            } else {
                 current.setPreciousness("non-precious");  //default
             }
-        }else {
+        } else {
             GemEnum temp = GemEnum.valueOf(localName.toUpperCase());
             if(withText.contains(temp)){
                 currentEnum=temp;
@@ -44,7 +46,7 @@ public class EntityHandler extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        if("gem".equals(localName)){
+        if("naturalGem".equals(localName) || "fakeGem".equals(localName)){
             gemSet.add(current);
         }
     }
@@ -71,6 +73,12 @@ public class EntityHandler extends DefaultHandler {
                     break;
                 case FACECOUNT:
                     current.getVisualParameters().setFaceCount(Integer.parseInt(context));
+                    break;
+                case AGE:
+                    current.setAge(Integer.parseInt(context));
+                    break;
+                case SIMILARITY:
+                    current.setSimilarity(Integer.parseInt(context));
                     break;
                 default: throw new EnumConstantNotPresentException(currentEnum.getDeclaringClass(), currentEnum.name());
             }

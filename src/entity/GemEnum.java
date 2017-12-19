@@ -4,7 +4,7 @@ package entity;
  * Created by DNAPC on 14.11.2017.
  */
 public enum GemEnum {
-    GEMS("gems"),
+    GEMS("Gems"),
     ID("id"),
     PRECIOUSNESS("preciousness"),
     KIND("kind"),
@@ -13,6 +13,8 @@ public enum GemEnum {
     COLOUR("colour"),
     CLARITY("clarity"),
     FACECOUNT("faceCount"),
+    AGE("age"),
+    SIMILARITY("similarity"),
     VISUALPARAMETERS("visualParameters");
 
     private String value;

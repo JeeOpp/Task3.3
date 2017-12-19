@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.example.com/gems"
-        xmlns:tns="http://www.example.com/gems"
-        elementFormDefault="qualified">
+        xmlns:tns="http://www.example.com/gems">
 
 
 <element name="kind" type="string" default="stone"/>
-<element name="origin" default="none">
+<element name="origin">
     <simpleType>
         <restriction base="string">
             <pattern value="[A-Z][a-z]*"/>
@@ -16,12 +15,13 @@
 
 <element name="clarity">
     <simpleType>
-        <restriction base="positiveInteger">
+        <restriction base="integer">
             <minInclusive value="0"/>
             <maxInclusive value="100"/>
         </restriction>
     </simpleType>
 </element>
+
 <element name="colour">
     <simpleType>
         <restriction base="string">
@@ -46,6 +46,16 @@
     </simpleType>
 </element>
 <element name="value" type="positiveInteger"/>
+<element name="age" type="positiveInteger"/>
+<element name="similarity">
+    <simpleType>
+        <restriction base="integer">
+            <minInclusive value="0"/>
+            <maxInclusive value="100"/>
+        </restriction>
+    </simpleType>
+</element>
+
 
 <element name="visualParameters">
     <complexType>
@@ -57,31 +67,55 @@
     </complexType>
 </element>
 
-<element name="gem">
-    <complexType>
-        <sequence>
-            <element ref="tns:kind"/>
-            <element ref="tns:origin"/>
-            <element ref="tns:visualParameters"/>
-            <element ref="tns:value"/>
-        </sequence>
-        <attribute name="id" type ="ID" use="required"/>
-        <attribute name="preciousness" default="non-precious" use="optional">
-            <simpleType>
-                <restriction base="string">
-                    <enumeration value="precious"/>
-                    <enumeration value="non-precious"/>
-                    <enumeration value="semi-precious"/>
-                </restriction>
-            </simpleType>
-        </attribute>
-    </complexType>
-</element>
+<complexType name="gem">
+    <sequence>
+        <element ref="tns:kind"/>
+        <element ref="tns:origin"/>
+        <element ref="tns:visualParameters"/>
+        <element ref="tns:value"/>
+    </sequence>
+    <attribute name="id" type ="ID" use="required"/>
+    <attribute name="preciousness" default="non-precious" use="optional">
+        <simpleType>
+            <restriction base="string">
+                <enumeration value="precious"/>
+                <enumeration value="non-precious"/>
+                <enumeration value="semi-precious"/>
+            </restriction>
+        </simpleType>
+    </attribute>
+</complexType>
+
+<complexType name="naturalGem">
+    <complexContent>
+        <extension base="tns:gem">
+            <sequence>
+                <element ref="tns:age" minOccurs="1"/>
+            </sequence>
+        </extension>
+    </complexContent>
+</complexType>
+
+<complexType name="fakeGem">
+    <complexContent>
+        <extension base="tns:gem">
+            <sequence>
+                <element ref="tns:similarity" minOccurs="1"/>
+            </sequence>
+        </extension>
+    </complexContent>
+</complexType>
+
+<element name="naturalGem" type="tns:naturalGem"/>
+<element name="fakeGem" type="tns:fakeGem"/>
 
 <element name="Gems">
     <complexType>
         <sequence>
-            <element ref="tns:gem" maxOccurs="unbounded"/>
+            <choice minOccurs="0" maxOccurs="unbounded">
+                <element ref="tns:naturalGem" />
+                <element ref="tns:fakeGem" />
+            </choice>
         </sequence>
     </complexType>
 </element>

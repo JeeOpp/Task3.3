@@ -1,6 +1,8 @@
 package service.builder;
 
+import entity.FakeGem;
 import entity.Gem;
+import entity.NaturalGem;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
@@ -36,20 +38,32 @@ public class DOMBuilder extends AbstractBuilder{
         try{
             document = documentBuilder.parse(xmlPath);
             Element root = document.getDocumentElement();
-            NodeList gemList = root.getElementsByTagName("gem");
-            for(int i=0; i<gemList.getLength();i++){
-                Element gemElement = (Element)gemList.item(i);
-                Gem gem = buildEntity(gemElement);
-                gemSet.add(gem);
-            }
+            setGemsFromNodes(root.getElementsByTagName("naturalGem"));
+            setGemsFromNodes(root.getElementsByTagName("fakeGem"));
+
         }catch (IOException ex){
             log.error(ex);
         }catch (SAXException ex){
             log.error(ex);
         }
     }
+    private void setGemsFromNodes(NodeList gemList){
+        for(int i=0; i<gemList.getLength();i++){
+            Element gemElement = (Element)gemList.item(i);
+            Gem gem = buildEntity(gemElement);
+            gemSet.add(gem);
+        }
+    }
+
     private Gem buildEntity(Element gemElement){
-        Gem gem = new Gem();
+        Gem gem = null;
+        if (gemElement.getTagName().equals("naturalGem")) {
+            gem = new NaturalGem();
+            gem.setAge(Integer.parseInt(getElementTextContent(gemElement,"age")));
+        }else{
+            gem = new FakeGem();
+            gem.setSimilarity(Integer.parseInt(getElementTextContent(gemElement,"similarity")));
+        }
         gem.setId(gemElement.getAttribute("id"));
         gem.setKind(getElementTextContent(gemElement,"kind"));
         gem.setOrigin(getElementTextContent(gemElement,"origin"));
@@ -73,3 +87,4 @@ public class DOMBuilder extends AbstractBuilder{
         return node.getTextContent();
     }
 }
+

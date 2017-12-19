@@ -1,5 +1,6 @@
 import controller.Controller;
 import entity.Gem;
+import entity.NaturalGem;
 import org.junit.Test;
 import service.builder.SAXBuilder;
 
@@ -19,9 +20,7 @@ public class SAXBuilderTest {
         Set<Gem> gemSet = saxBuilder.getGemSet();
 
         Gem.VisualParameters visualParameters = new Gem.VisualParameters("yellow",86,10);
-        Gem example = new Gem("a1","Yeludit","semi-precious","Kazahstan",visualParameters,12);
-
-        Boolean expected = gemSet.contains(example);
+        Gem example = new NaturalGem("a1","Yeludit","semi-precious","Kazahstan",visualParameters,12,100000);
 
         assertEquals(true, gemSet.contains(example));
     }

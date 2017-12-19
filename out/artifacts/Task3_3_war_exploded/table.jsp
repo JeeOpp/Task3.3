@@ -25,6 +25,8 @@
             <th>Colour</th>
             <th>Clarity</th><th>FaceCount</th>
             <th>Value</th>
+            <th><i>Age</i></th>
+            <th><i>Similarity</i></th>
         </tr>
         </thead>
         <c:forEach var="gem" items="${requestScope.gemSetToPage}">
@@ -37,6 +39,8 @@
             <td>${gem.visualParameters.clarity}</td>
             <td>${gem.visualParameters.faceCount}</td>
             <td>${gem.value}</td>
+            <td><i>${gem.age}</i></td>
+            <td><i>${gem.similarity}</i></td>
         </tr>
     </c:forEach>
     </table>

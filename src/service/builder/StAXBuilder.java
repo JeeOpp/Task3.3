@@ -1,7 +1,9 @@
 package service.builder;
 
+import entity.FakeGem;
 import entity.Gem;
 import entity.GemEnum;
+import entity.NaturalGem;
 import org.apache.log4j.Logger;
 
 import javax.xml.namespace.QName;
@@ -25,7 +27,7 @@ import java.util.Set;
 public class StAXBuilder extends AbstractBuilder {
     private Gem gem = null;
     private GemEnum currentEnum = null;
-    private EnumSet<GemEnum> withText = EnumSet.range(GemEnum.KIND, GemEnum.FACECOUNT);
+    private EnumSet<GemEnum> withText = EnumSet.range(GemEnum.KIND, GemEnum.SIMILARITY);
     private XMLInputFactory xmlInputFactory;
 
     public StAXBuilder(){
@@ -57,8 +59,9 @@ public class StAXBuilder extends AbstractBuilder {
 
     private void startElement(XMLEvent xmlEvent){
         StartElement startElement = xmlEvent.asStartElement();
-        if (startElement.getName().getLocalPart().equals("gem")) {
-            gem = new Gem();
+        String element = startElement.getName().getLocalPart();
+        if (element.equals("naturalGem") || element.equals("fakeGem")) {
+            gem = element.equals("naturalGem") ? new NaturalGem(): new FakeGem();
             Attribute attr = startElement.getAttributeByName(new QName("id"));
             gem.setId(attr.getValue());
             attr = startElement.getAttributeByName(new QName("preciousness"));
@@ -67,7 +70,7 @@ public class StAXBuilder extends AbstractBuilder {
             } else {
                 gem.setPreciousness("non-precious");
             }
-        } else {
+        }else{
             GemEnum tempEnum = GemEnum.valueOf(startElement.getName().getLocalPart().toUpperCase());
             if(withText.contains(tempEnum)){
                 currentEnum=tempEnum;
@@ -76,6 +79,9 @@ public class StAXBuilder extends AbstractBuilder {
     }
 
     private void characters(XMLEvent xmlEvent){
+        if(currentEnum==null){
+            return;
+        }
         switch (currentEnum) {
             case KIND:
                 gem.setKind(xmlEvent.asCharacters().getData());
@@ -95,6 +101,12 @@ public class StAXBuilder extends AbstractBuilder {
             case FACECOUNT:
                 gem.getVisualParameters().setFaceCount(Integer.parseInt(xmlEvent.asCharacters().getData()));
                 break;
+            case AGE:
+                gem.setAge(Integer.parseInt(xmlEvent.asCharacters().getData()));
+                break;
+            case SIMILARITY:
+                gem.setSimilarity(Integer.parseInt(xmlEvent.asCharacters().getData()));
+                break;
             default:
                 throw new EnumConstantNotPresentException(currentEnum.getDeclaringClass(), currentEnum.name());
         }
@@ -103,7 +115,8 @@ public class StAXBuilder extends AbstractBuilder {
 
     private void endElement(XMLEvent xmlEvent){
         EndElement endElement = xmlEvent.asEndElement();
-        if (endElement.getName().getLocalPart().equals("gem")) {
+        String element = endElement.getName().getLocalPart();
+        if (element.equals("naturalGem") || element.equals("fakeGem")) {
             gemSet.add(gem);
         }
     }

@@ -17,8 +17,7 @@ import java.util.Set;
  */
 public class Controller extends HttpServlet {
     public static final String PATH = "D:\\Documents\\Java\\WEB\\Task3.3\\Task3.3\\resources\\test.xml";
-
-    public static final int RECORDS_PER_PAGE = 5;
+    public static final int RECORDS_PER_PAGE = 7;
 
     public Controller() {
         super();

@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder={"kind","origin","visualParameters","value"},name = "gem")
-public class Gem {
+abstract public class Gem {
     @XmlAttribute(required = true)
     @XmlID
     private String id;
@@ -57,6 +57,14 @@ public class Gem {
         return value;
     }
 
+    public Integer getAge(){
+        return null;
+    }
+
+    public Integer getSimilarity(){
+        return null;
+    }
+
     public void setId(String id) {
         this.id = id;
     }
@@ -79,6 +87,11 @@ public class Gem {
 
     public void setValue(Integer value) {
         this.value = value;
+    }
+
+    public void setAge(int age){
+    }
+    public void setSimilarity(int similarity){
     }
 
     @Override

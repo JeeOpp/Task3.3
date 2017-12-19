@@ -8,6 +8,7 @@ import service.impl.ServiceImpl;
 public class ServiceFactory {
     private static final ServiceFactory instance = new ServiceFactory();
     private final Service service = new ServiceImpl();
+    private final Marshaller marshaller = new Marshaller();
 
     private ServiceFactory() {}
 
@@ -16,5 +17,8 @@ public class ServiceFactory {
     }
     public Service getService(){
         return service;
+    }
+    public Marshaller getMarshaller() {
+        return marshaller;
     }
 }
