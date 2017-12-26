@@ -17,7 +17,8 @@ import java.util.Set;
  */
 public class Controller extends HttpServlet {
     public static final String PATH = "D:\\Documents\\Java\\WEB\\Task3.3\\Task3.3\\resources\\test.xml";
-    public static final int RECORDS_PER_PAGE = 7;
+    public final int RECORDS_PER_PAGE = 7;
+    public final int DEFAULT_PAGE = 1;
 
     public Controller() {
         super();
@@ -32,7 +33,7 @@ public class Controller extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         String method = req.getParameter("method");
-        int page = 1; //default page
+        int page = DEFAULT_PAGE;
         if(req.getParameter("page") != null){
             page = Integer.parseInt(req.getParameter("page"));
         }
@@ -41,7 +42,7 @@ public class Controller extends HttpServlet {
         Set<Gem> gemSet = service.parseXML(method, PATH);
         Set<Gem> gemSetToPage =  service.getRecords(gemSet,page, RECORDS_PER_PAGE);
         int countRecords = gemSet.size();
-        int countPages = (int) Math.ceil(countRecords* 1.0 / RECORDS_PER_PAGE);
+        int countPages = (int) Math.ceil((double) countRecords/ RECORDS_PER_PAGE);
 
         req.setAttribute("gemSetToPage",gemSetToPage);
         req.setAttribute("countPages", countPages);

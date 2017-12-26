@@ -21,6 +21,8 @@ import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Set;
 
+import static entity.GemEnum.*;
+
 /**
  * Created by DNAPC on 14.11.2017.
  */
@@ -29,6 +31,7 @@ public class StAXBuilder extends AbstractBuilder {
     private GemEnum currentEnum = null;
     private EnumSet<GemEnum> withText = EnumSet.range(GemEnum.KIND, GemEnum.SIMILARITY);
     private XMLInputFactory xmlInputFactory;
+    private final String DEFAULT_PRECIOUS = "non-precious";
 
     public StAXBuilder(){
         gemSet = new HashSet<>();
@@ -60,15 +63,15 @@ public class StAXBuilder extends AbstractBuilder {
     private void startElement(XMLEvent xmlEvent){
         StartElement startElement = xmlEvent.asStartElement();
         String element = startElement.getName().getLocalPart();
-        if (element.equals("naturalGem") || element.equals("fakeGem")) {
-            gem = element.equals("naturalGem") ? new NaturalGem(): new FakeGem();
-            Attribute attr = startElement.getAttributeByName(new QName("id"));
+        if (element.equals(NATURAL_GEM.getValue()) || element.equals(FAKE_GEM.getValue())){
+            gem = element.equals(NATURAL_GEM.getValue()) ? new NaturalGem(): new FakeGem();
+            Attribute attr = startElement.getAttributeByName(new QName(ID.getValue()));
             gem.setId(attr.getValue());
-            attr = startElement.getAttributeByName(new QName("preciousness"));
+            attr = startElement.getAttributeByName(new QName(PRECIOUSNESS.getValue()));
             if (attr != null) {
                 gem.setPreciousness(attr.getValue());
             } else {
-                gem.setPreciousness("non-precious");
+                gem.setPreciousness(DEFAULT_PRECIOUS);
             }
         }else{
             GemEnum tempEnum = GemEnum.valueOf(startElement.getName().getLocalPart().toUpperCase());
@@ -116,7 +119,7 @@ public class StAXBuilder extends AbstractBuilder {
     private void endElement(XMLEvent xmlEvent){
         EndElement endElement = xmlEvent.asEndElement();
         String element = endElement.getName().getLocalPart();
-        if (element.equals("naturalGem") || element.equals("fakeGem")) {
+        if (element.equals(NATURAL_GEM.getValue()) || element.equals(FAKE_GEM.getValue())) {
             gemSet.add(gem);
         }
     }

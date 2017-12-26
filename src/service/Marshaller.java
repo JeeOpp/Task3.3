@@ -10,9 +10,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.Set;
 
-/**
- * Created by DNAPC on 18.11.2017.
- */
 public class Marshaller {
     private static final Logger log = Logger.getLogger(Marshaller.class);
     private Set<Gem> gemSet = null;

@@ -12,6 +12,9 @@ import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Set;
 
+import static entity.GemEnum.FAKE_GEM;
+import static entity.GemEnum.NATURAL_GEM;
+
 /**
  * Created by DNAPC on 14.11.2017.
  */
@@ -21,6 +24,13 @@ public class EntityHandler extends DefaultHandler {
     private GemEnum currentEnum = null;
     private EnumSet<GemEnum> withText;
 
+    public final int FIRST_ATTRIBUTE = 0;
+    public final int SECOND_ATTRIBUTE = 1;
+    public final int MAX_COUNT_ATTRIBUTES = 2;
+
+    public final String DEFAULT_PRECIOUS = "non-precious";
+
+
     public EntityHandler() {
         gemSet = new HashSet<>();
         withText = EnumSet.range(GemEnum.KIND, GemEnum.SIMILARITY);
@@ -28,13 +38,13 @@ public class EntityHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if ("naturalGem".equals(localName) || "fakeGem".equals(localName)) {
-            current = localName.equals("naturalGem") ? new NaturalGem(): new FakeGem();
-            current.setId(attributes.getValue(0));
-            if (attributes.getLength() == 2) {
-                current.setPreciousness(attributes.getValue(1));
+        if (NATURAL_GEM.getValue().equals(localName) || FAKE_GEM.getValue().equals(localName)) {
+            current = localName.equals(NATURAL_GEM.getValue()) ? new NaturalGem(): new FakeGem();
+            current.setId(attributes.getValue(FIRST_ATTRIBUTE));
+            if (attributes.getLength() == MAX_COUNT_ATTRIBUTES) {
+                current.setPreciousness(attributes.getValue(SECOND_ATTRIBUTE));
             } else {
-                current.setPreciousness("non-precious");  //default
+                current.setPreciousness(DEFAULT_PRECIOUS);
             }
         } else {
             GemEnum temp = GemEnum.valueOf(localName.toUpperCase());
@@ -46,7 +56,7 @@ public class EntityHandler extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        if("naturalGem".equals(localName) || "fakeGem".equals(localName)){
+        if(NATURAL_GEM.getValue().equals(localName) || FAKE_GEM.getValue().equals(localName)){
             gemSet.add(current);
         }
     }

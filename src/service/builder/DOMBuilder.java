@@ -17,12 +17,17 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.apache.log4j.Logger;
 
+import static entity.GemEnum.*;
+
 /**
  * Created by DNAPC on 14.11.2017.
  */
 public class DOMBuilder extends AbstractBuilder{
     private static final Logger log = Logger.getLogger(DOMBuilder.class);
     private DocumentBuilder documentBuilder;
+
+    private final String DEFAULT_PRECIOUS = "non-precious";
+    private final int FIRST_NODE = 0;
 
     public DOMBuilder(){
         gemSet = new HashSet<>();
@@ -38,8 +43,8 @@ public class DOMBuilder extends AbstractBuilder{
         try{
             document = documentBuilder.parse(xmlPath);
             Element root = document.getDocumentElement();
-            setGemsFromNodes(root.getElementsByTagName("naturalGem"));
-            setGemsFromNodes(root.getElementsByTagName("fakeGem"));
+            setGemsFromNodes(root.getElementsByTagName(NATURAL_GEM.getValue()));
+            setGemsFromNodes(root.getElementsByTagName(FAKE_GEM.getValue()));
 
         }catch (IOException ex){
             log.error(ex);
@@ -57,33 +62,33 @@ public class DOMBuilder extends AbstractBuilder{
 
     private Gem buildEntity(Element gemElement){
         Gem gem;
-        if (gemElement.getTagName().equals("naturalGem")) {
+        if (gemElement.getTagName().equals(NATURAL_GEM.getValue())) {
             gem = new NaturalGem();
-            gem.setAge(Integer.parseInt(getElementTextContent(gemElement,"age")));
+            gem.setAge(Integer.parseInt(getElementTextContent(gemElement,AGE.getValue())));
         }else{
             gem = new FakeGem();
-            gem.setSimilarity(Integer.parseInt(getElementTextContent(gemElement,"similarity")));
+            gem.setSimilarity(Integer.parseInt(getElementTextContent(gemElement,SIMILARITY.getValue())));
         }
-        gem.setId(gemElement.getAttribute("id"));
-        gem.setKind(getElementTextContent(gemElement,"kind"));
-        gem.setOrigin(getElementTextContent(gemElement,"origin"));
+        gem.setId(gemElement.getAttribute(ID.getValue()));
+        gem.setKind(getElementTextContent(gemElement,KIND.getValue()));
+        gem.setOrigin(getElementTextContent(gemElement,ORIGIN.getValue()));
         String preciousness;
-        if((preciousness = gemElement.getAttribute("preciousness")).isEmpty()){
-            gem.setPreciousness("non-precious");
+        if((preciousness = gemElement.getAttribute(PRECIOUSNESS.getValue())).isEmpty()){
+            gem.setPreciousness(DEFAULT_PRECIOUS);
         }else {
             gem.setPreciousness(preciousness);
         }
-        gem.setValue(Integer.parseInt(getElementTextContent(gemElement,"value")));
+        gem.setValue(Integer.parseInt(getElementTextContent(gemElement,VALUE.getValue())));
 
         Gem.VisualParameters visualParameters = gem.getVisualParameters();
-        visualParameters.setClarity(Integer.parseInt(getElementTextContent(gemElement,"clarity")));
-        visualParameters.setColour(getElementTextContent(gemElement,"colour"));
-        visualParameters.setFaceCount(Integer.parseInt(getElementTextContent(gemElement,"faceCount")));
+        visualParameters.setClarity(Integer.parseInt(getElementTextContent(gemElement,CLARITY.getValue())));
+        visualParameters.setColour(getElementTextContent(gemElement,COLOUR.getValue()));
+        visualParameters.setFaceCount(Integer.parseInt(getElementTextContent(gemElement,FACECOUNT.getValue())));
         return gem;
     }
     private String getElementTextContent(Element element, String elementName){
         NodeList nodeList = element.getElementsByTagName(elementName);
-        Node node = nodeList.item(0);
+        Node node = nodeList.item(FIRST_NODE);
         return node.getTextContent();
     }
 }

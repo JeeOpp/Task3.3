@@ -4,6 +4,8 @@ package entity;
  * Created by DNAPC on 14.11.2017.
  */
 public enum GemEnum {
+    NATURAL_GEM ("naturalGem"),
+    FAKE_GEM ("fakeGem"),
     GEMS("Gems"),
     ID("id"),
     PRECIOUSNESS("preciousness"),
@@ -21,7 +23,7 @@ public enum GemEnum {
     private GemEnum(String value){
         this.value=value;
     }
-    private String getValue(){
+    public String getValue(){
         return value;
     }
 }

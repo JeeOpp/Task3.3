@@ -18,7 +18,4 @@ public class ServiceFactory {
     public Service getService(){
         return service;
     }
-    public Marshaller getMarshaller() {
-        return marshaller;
-    }
 }
